@@ -91,7 +91,7 @@ const TableDetails = (props) => {
           </TableHead>
           <TableBody>
             {images.map(row => (
-              <TableRow key={row.image_category}>
+              <TableRow key={row.id}>
                 <TableCell component="th" scope="row" className={classes.cellWidth}>
                   <Avatar variant="square" className={classes.square}>
                     <img src={row.image_location} className={classes.image}/>

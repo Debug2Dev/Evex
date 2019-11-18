@@ -34,10 +34,10 @@ const ComponentIndexPage = props => {
   return (
     <Grid item className={classes.spacingTop}>
       <Grid container spacing={spacing}>
-        <Grid className={classes.firstDiv} key lg={6} md={12} xs={12} item>
+        <Grid className={classes.firstDiv} lg={6} md={12} xs={12} item>
           <img src={(images[0] || {}).image_location} className={classes.firstDiv}/>
         </Grid>
-        <Grid key lg={6}  md={12} xs={12} item>
+        <Grid lg={6}  md={12} xs={12} item>
           <Grid item lg={12}  md={12} xs={12}>
             <Grid container spacing={spacing}>
               {

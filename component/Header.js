@@ -4,7 +4,8 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
-import { withTranslation } from '../i18n'
+import { withTranslation, i18n } from '../i18n'
+import { Button } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -30,6 +31,7 @@ const Header = ({t}) => {
           <Typography variant="h6" className={classes.title} color="primary">
             {t('appName')}
           </Typography>
+          <Button onClick={() => i18n.changeLanguage(i18n.language === 'en' ? 'de' : 'en')} color="inherit">{t('change-locale')}</Button>
         </Toolbar>
       </AppBar>
     </div>

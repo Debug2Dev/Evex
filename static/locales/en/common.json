@@ -22,5 +22,6 @@
   "theater": "Theater",
   "classRoom": "Class Room",
   "boardRoom": "Board Room",
-  "viewDetails": "View Details"
+  "viewDetails": "View Details",
+  "change-locale": "en/de"
 }
