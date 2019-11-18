@@ -29,30 +29,30 @@ const Amenities = (props) => {
   const { t } = props;
   return (
     <div>
-      <Grid container item xs={12} spacing={spacing} className={classes.spacingTop}>
-        <Grid xs={12} item>
+      <Grid container item lg={12} md={12} xs={12} spacing={spacing} className={classes.spacingTop}>
+        <Grid xs={12} lg={12} md={12} item>
             <Typography variant="h6" gutterBottom>{t('amenities')}</Typography>
         </Grid>
-        <Grid container item xs={12} spacing={spacing}>
-          <Grid xs={3} item>
+        <Grid container item lg={12} md={12} xs={12} spacing={spacing}>
+          <Grid xs={6} lg={3} md={3} item>
               <Typography variant="subtitle2" gutterBottom>{t('roomFeature')}</Typography>
               {data.map((a, key) => (
                 <Typography key={key+"_1"} variant="body2" gutterBottom>{a.name}</Typography>
               ))}
           </Grid>
-          <Grid xs={3} item>
+          <Grid xs={6} lg={3} md={3} item>
               <Typography variant="subtitle2" gutterBottom>{t('facilities')}</Typography>
               {data.map((a, key) => (
                 <Typography key={key+"_2"} variant="body2" gutterBottom>{a.name}</Typography>
               ))}
           </Grid>
-          <Grid xs={3} item>
+          <Grid xs={6} lg={3} md={3} item>
               <Typography variant="subtitle2" gutterBottom>{t('busService')}</Typography>
               {data.map((a, key) => (
                 <Typography key={key+"_3"} variant="body2" gutterBottom>{a.name}</Typography>
               ))}
           </Grid>
-          <Grid xs={3} item>
+          <Grid xs={6} lg={3} md={3} item>
               <Typography variant="subtitle2" gutterBottom>{t('venueAccessibility')}</Typography>
               {data.map((a, key) => (
                 <Typography key={key+"_4"} variant="body2" gutterBottom>{a.name}</Typography>

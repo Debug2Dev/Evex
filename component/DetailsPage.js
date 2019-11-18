@@ -27,32 +27,32 @@ const DetailsPage = (props) => {
   const details = ((responseObject || {}).venue || {});
 
   return (
-    <Grid container item xs={12} spacing={spacing} className={classes.spacingTop}>
-      <Grid xs={6} item>
-        <Grid xs={8} item>
+    <Grid container item xs={12} lg={12} md={12} spacing={spacing} className={classes.spacingTop}>
+      <Grid lg={6} md={6} xs={12} item>
+        <Grid xs={12} lg={12} md={8} item>
           <Typography variant="h5" component="h1" gutterBottom>{details.name}</Typography>
           <Typography variant="subtitle1" component="h1" gutterBottom>Bellary Road, Bangalore</Typography>
         </Grid>
-        <Grid container xs={12} item spacing={spacing} className={classes.spacingTop}>
-          <Grid xs={5} item>
+        <Grid container lg={12} md={12} xs={12} item spacing={spacing} className={classes.spacingTop}>
+          <Grid xs={6} lg={5} md={5} item>
             <Typography variant="subtitle1" gutterBottom>
               <strong>{t('meetingSapce')}</strong>
             </Typography>
             <Typography variant="button" gutterBottom>{details.meeting_space} {t('sqUnit')}</Typography>
           </Grid>
-          <Grid xs={5} item>
+          <Grid lg={5} md={5} xs={6} item>
             <Typography variant="subtitle1" gutterBottom>
             <strong>{t('capacity')}</strong>
             </Typography>
             <Typography variant="button" gutterBottom>{details.capacity}</Typography>
           </Grid>
-          <Grid xs={5} item>
+          <Grid lg={5} md={5} xs={6} item>
             <Typography variant="subtitle1" gutterBottom>
             <strong>{t('totalRooms')}</strong>
             </Typography>
             <Typography variant="button" gutterBottom>{details.total_rooms}</Typography>
           </Grid>
-          <Grid xs={5} item>
+          <Grid lg={5} md={5} xs={6} item>
             <Typography variant="subtitle1" gutterBottom>
             <strong>{t('footFall')}</strong>
             </Typography>
@@ -61,7 +61,7 @@ const DetailsPage = (props) => {
 
         </Grid>
       </Grid>
-      <Grid xs={6} item>
+      <Grid xs={12} lg={6} md={6} item>
         <Grid container
           direction="row"
           justify="flex-end"

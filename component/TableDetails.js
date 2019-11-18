@@ -1,4 +1,4 @@
-import React, { useEffect, Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { withTranslation } from '../i18n'
@@ -12,7 +12,7 @@ import Paper from '@material-ui/core/Paper';
 import LaunchIcon from '@material-ui/icons/Launch';
 import GamesIcon from '@material-ui/icons/Games';
 import { deepOrange } from '@material-ui/core/colors';
-import { Avatar, Typography } from '@material-ui/core';
+import { Avatar, Typography, Box } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -96,10 +96,10 @@ const TableDetails = (props) => {
                   <Avatar variant="square" className={classes.square}>
                     <img src={row.image_location} className={classes.image}/>
                   </Avatar>
-                  <div className={classes.imgCont}>
+                  <Box component="div" className={classes.imgCont} display={{ xs: 'none', md: 'none', lg: 'block' }}>
                     <Typography variant="caption" className={classes.imgText}>{row.image_category}</Typography>
                     <Typography variant="caption" color="primary" className={classes.imgText}>{t('viewDetails')}</Typography>
-                  </div>
+                  </Box>
                   
                 </TableCell>
                 <TableCell align="right">{row.file_size} {t('sqUnit')}</TableCell>

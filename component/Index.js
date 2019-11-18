@@ -16,6 +16,7 @@ const useStyles = makeStyles(theme => ({
   firstDiv:{
     height:400,
     width:"100%",
+    marginBottom: "15px"
   },
   control: {
     padding: theme.spacing(8)
