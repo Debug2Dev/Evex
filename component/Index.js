@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { withTranslation } from "../i18n";
 import { Paper, Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import CardMedia from '@material-ui/core/CardMedia';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -13,9 +14,9 @@ const useStyles = makeStyles(theme => ({
     height: 190,
     width: "100%"
   },
-  firstDiv:{
-    height:400,
-    width:"100%",
+  firstDiv: {
+    height: 400,
+    width: "100%",
     marginBottom: "15px"
   },
   control: {
@@ -36,23 +37,27 @@ const ComponentIndexPage = props => {
     <Grid item className={classes.spacingTop}>
       <Grid container spacing={spacing}>
         <Grid className={classes.firstDiv} lg={6} md={12} xs={12} item>
-          <img src={(images[0] || {}).image_location} className={classes.firstDiv}/>
+          <CardMedia
+            image={(images[0] || {}).image_location} className={classes.firstDiv}
+          />
         </Grid>
-        <Grid lg={6}  md={12} xs={12} item>
-          <Grid item lg={12}  md={12} xs={12}>
+        <Grid lg={6} md={12} xs={12} item>
+          <Grid item lg={12} md={12} xs={12}>
             <Grid container spacing={spacing}>
               {
                 images.slice(1, 5).map((a, key) => (
                   <Grid key={a.id} lg={6} md={6} xs={12} item>
-                    <img src={a.image_location} className={classes.paper}/>
+                    <CardMedia
+                      image={a.image_location} className={classes.paper}
+                    />
                   </Grid>
-                  )
+                )
                 )
               }
             </Grid>
           </Grid>
         </Grid>
-        </Grid>
+      </Grid>
     </Grid>
   );
 };
